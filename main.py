@@ -23,7 +23,9 @@ while ans:
     12.Restar dos vectores A = (4;-8;6) B = (1;4;2) 
     13.Multiplicar dos vectores A = (1;2;3) B = (4;5;6) 
     14.Dividir vector por escalar A = (4;6;8) escalar 2
-    15.Matriz (3x3) + Vector
+    15.Sumar 2 Matriz de (3x3)  
+    16.Restar 2 Matriz de (3x3)  
+    17.Multiplicar Matriz de (3x3)  x Vector de (3x1) (Sin hacer)
     99.Exit/Quit
     """)
     ans=input("Que quiere hacer? ")
@@ -109,7 +111,35 @@ while ans:
         escalar = 2
         salida=Vector.dividir(a,escalar)
         print (salida.x, salida.y, salida.z)
+    elif ans=="15":
+        a = Matriz( 3, 3, "R")
+        a.show_matrix()
+        b = Matriz( 3, 3, "R")
+        b.show_matrix()
 
+        salida=Matriz.operacion(a,b,"+")
+
+        salida.show_matrix()
+
+    elif ans=="16":
+        a = Matriz( 3, 3, "R")
+        a.show_matrix()
+        b = Matriz( 3, 3, "R")
+        b.show_matrix()
+
+        salida=Matriz.operacion(a,b,"-")
+
+        salida.show_matrix()
+
+    elif ans=="17":
+        """"
+        a = Matriz( 3, 3, "R")
+        a.show_matrix()
+        
+        salida=Matriz.operacion(a,b,"-")
+
+        salida.show_matrix()
+        """
 
     elif ans=="99":
        print("\n Adios") 
